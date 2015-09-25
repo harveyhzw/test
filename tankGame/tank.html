@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=GBK">
+	<title>a tank game - author:iscgc 2012-11-09 	QQ : 137544496 </title>
+	<script type="text/javascript" src="Constant.JS"></script>
+	<script type="text/javascript" src="tank.js"></script>
+	<script type="text/javascript" src="GameMain.js"></script>
+	<script type="text/javascript">
+		var game = new Game();
+		// 控制台
+		function logs (info){
+			var dom_x = document.getElementById('logs');
+			var str_x = dom_x.innerHTML;
+			dom_x.innerHTML = info + '<br>' + dom_x.innerHTML;
+		};
+		
+	</script>
+</head>
+<body>
+	<center>
+		<canvas id="gameWindow" style="border:3px ridge gray;background:#000000;width:950px;height:600px;" width="950" height="600">对不起，你的浏览器不支持 HTML5 ，请下载谷歌或者火狐浏览器</canvas>
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td><div id="logs" style="text-align:left;font-size:12px;width:200px;height:50px;overflow:auto;"></div></td>
+				<td><input type="button" value="开  始" onclick="game.start();"/></td>
+				<td><input type="button" value="暂  停" onclick="game.stop();"/></td>
+			</tr>
+		</table>
+	<center>
+</body>
+	<script type="text/javascript">
+		document.body.onload = game.init();
+		//document.onkeyup = userKeyUp;
+		//document.onkeydown = userKeyDown;
+	</script>
+</html>
+
